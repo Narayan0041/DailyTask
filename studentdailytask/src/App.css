@@ -1,0 +1,1045 @@
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
+
+ :root {
+   --background-color: rgb(226, 224, 224);
+   --text-color: rgb(0 70 96);
+   --text-white-color: white;
+   --light-gray: rgb(179, 179, 179);
+ }
+
+ * {
+   margin: 0;
+   padding: 0;
+   outline: none;
+   border: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   transition: all .2s linear;
+   font-style: 'Raleway', sans-serif;
+ }
+
+ html {
+   scroll-behavior: smooth;
+   scroll-padding-top: 7px;
+   overflow-x: hidden;
+ }
+
+ body {
+   background-color: var(--background-color);
+ }
+
+ /* --------------------------------------------------login / register section--------------------------------------------- */
+ .Container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 8rem;
+   width: 100%;
+ }
+
+ .PageContainer {
+   border-radius: .5rem;
+   width: 20%;
+   background-color: rgb(240, 238, 238);
+ }
+
+ .HeaderSection h2 {
+   font-weight: 700;
+ }
+
+ .HeaderContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding-bottom: 2rem;
+ }
+
+ .UserProfileSection {
+   margin-top: 1rem;
+ }
+
+ .TopSection {
+   display: flex;
+   justify-content: space-between;
+   padding: 1rem 1rem;
+   align-items: center;
+ }
+
+ .BackSection i {
+   font-size: 1.2rem;
+   color: var(--text-color);
+ }
+
+ .SignUp a {
+   font-weight: 600;
+   color: var(--text-color)
+ }
+
+ .InputSection input {
+   font-size: .9rem;
+   margin-top: .5rem;
+   width: 15rem;
+   border-radius: 2rem;
+   height: 2.5rem;
+   color: var(--text-color);
+   padding: .5rem 1.5rem;
+   background-color: white
+ }
+
+ .forgetPassword p {
+   font-weight: 500;
+   margin-left: .5rem;
+   margin-top: .5rem;
+   font-size: .9rem;
+ }
+
+ .forgetPassword a {
+   text-decoration: underline;
+   color: var(--text-color);
+ }
+
+ .Button button {
+   border-radius: 1rem;
+   width: 100%;
+   margin-top: 1.5rem;
+   height: 2.5rem;
+   font-size: .9rem;
+   background-color: var(--text-color);
+   color: var(--text-white-color);
+ }
+
+ /* ------------------------------------ForgetPassword Section------------------------------ */
+ .ForgetPasswordSection {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   margin-top: 10rem;
+ }
+
+ .ForgetPasswordContainer img {
+   margin-left: 8rem;
+   margin-top: 1rem;
+ }
+
+ .ForgetPasswordContainer h1 {
+   margin-left: 4rem;
+ }
+
+ .ForgetPasswordInputSection {
+   margin-top: 1rem;
+ }
+
+ .ForgetPasswordInputSection input {
+   margin-left: 1rem;
+   width: 90%;
+   height: 3rem;
+   margin-top: 1rem;
+ }
+
+ .ForgetPasswordInputSection .Submit {
+   padding: 1rem 3rem;
+   margin-right: 3rem;
+   margin-left: 3rem;
+ }
+
+ /* ----------------------------------------RecoverPasswordContainer--------------------------------------- */
+
+ .RecoverPasswordContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+ }
+
+ .RecoverPasswordContainer .RecoverPasswordSection {
+   margin-top: 7rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+ }
+
+ .RecoverPasswordSection img {
+   margin-top: 2rem;
+ }
+
+ .ResetPasswordInputSection input {
+   width: 100%;
+   height: 3rem;
+   margin-top: 1rem;
+ }
+
+ .ResetPasswordInputSection .Submit {
+   width: 90%;
+   margin-left: 1rem;
+   margin-right: 2rem;
+ }
+
+ /* -------------------------------------------Rolepage section-------------------------------------- */
+ .SelectModeContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+ }
+
+ .MainContainer {
+   margin-top: 3rem;
+ }
+
+ .MainContainer h2 {
+   font-size: 1rem;
+   font-weight: 600;
+   text-transform: uppercase;
+ }
+
+ .ModeSection {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 30rem;
+ }
+
+ .UnderLine {
+   height: .2rem;
+   width: 80%;
+   background-color: var(--text-color);
+ }
+
+ /* -------------------------------------------------------navbar section-------------------------------------------- */
+ .Navbar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   box-shadow: 0px 1px 5px var(--text-color);
+   padding: .8rem .5rem;
+   background-color: rgb(236, 235, 235);
+ }
+
+ .SearchSection span {
+   position: relative;
+   top: .7rem;
+   /* right: .5rem; */
+   font-size: 1.1rem;
+ }
+
+ .SearchSection input {
+   width: 100%;
+   background-color: transparent;
+   margin-top: .1rem;
+   padding: .5rem .1rem .5rem 1rem;
+   border: none;
+   font-size: 1.1rem;
+
+ }
+
+ .SearchSection input:hover {
+   border: none;
+ }
+
+ .SearchSection input:active {
+   border: none;
+ }
+
+ .SearchSection {
+   display: flex;
+   height:2.8rem;
+   width: 18rem;
+   font-size: 1.2rem;
+   padding: 0 1rem 0 1rem;
+   border-radius: 2rem;
+   border: 2px solid rgb(150, 150, 150);
+   margin-right: .26rem;
+   color: var(--text-color);
+   background-color: white;
+ }
+
+ .SearchSection:hover {
+   border: 2px solid var(--text-color);
+ }
+
+ .SearchSection:active {
+   border: 2px solid var(--text-color);
+ }
+
+ .ProfileSection {
+   height: 3rem;
+   width: 3rem;
+   color: white;
+   border-radius: 50%;
+   text-align: center;
+   padding-left: .1rem;
+   padding-top: .7rem;
+   background-color: var(--text-color);
+ }
+
+ .ProfileSection p {
+   font-size: 1.5rem;
+ }
+
+ /* ----------------------------------------slider section----------------------------------- */
+ #app {
+   height: 100%;
+ }
+
+ html,
+ body {
+   position: relative;
+   height: 100%;
+ }
+
+ body {
+   background: #eee;
+   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+   font-size: 14px;
+   color: #000;
+   margin: 0;
+   padding: 0;
+ }
+
+ .swiper {
+   width: 100%;
+   height: 10vh;
+ }
+
+ .swiper-slide {
+   text-align: center;
+   font-size: 18px;
+   background: #fff;
+   /* Center slide text vertically */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .swiper-slide img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+
+ .swiper-button-prev:after,
+ .swiper-rtl .swiper-button-next:after {
+   display: none;
+ }
+
+ .swiper-button-next:after,
+ .swiper-rtl .swiper-button-prev:after {
+   display: none;
+ }
+
+ .AddUserSection button {
+   color: white;
+   display: inline-block;
+   border-radius: 2.5rem;
+   position: fixed;
+   bottom: 7rem;
+   right: 1rem;
+   padding: 1.2rem 1.5rem;
+   background-color: var(--text-color);
+   transition: .3s background-color ease-in-out;
+ }
+
+ .AddUserSection button:active {
+   background-color: rgb(1, 55, 75);
+   box-shadow: 1px 1px 10px black;
+ }
+
+ .AddUserSection p {
+   font-size: 1.1rem;
+ }
+
+ /* ----------------------------------StudentListSection---------------------------------------------- */
+
+ .StudentBox {
+   display: flex;
+   align-items: center;
+   padding: .5rem 1rem;
+
+ }
+
+ .StudentProfile {
+   height: 3rem;
+   width: 3rem;
+   border-radius: 50%;
+   background-color: var(--text-color);
+   text-align: center;
+   padding-top: .5rem;
+   font-size: 1.7rem;
+   color: white;
+ }
+
+ .StudentName {
+   margin-left: 1rem;
+   font-size: 1.2rem;
+ }
+
+ .BreakPoint {
+   height: .05rem;
+   width: 65%;
+   margin-left: 5rem;
+   margin-top: .5rem;
+   margin-bottom: .5rem;
+   background-color: gray;
+ }
+ .StudentEmail{
+  display: none;
+ }
+
+ /* ---------------------------------------------StudentDataList------------------------------------------- */
+ .StudentDataList {
+   margin-top: 5rem;
+   padding-bottom: 6rem;
+ }
+
+ /* -----------------------------------UserDetail---------------------------- */
+
+ /* ----------------------------------AddTextSection---------------------------------------- */
+ .AddTextSection {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100vh;
+ }
+
+ .AddTextContainer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 18vh;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   background-color: white;
+   border-top-right-radius: 1.5rem;
+   border-top-left-radius: 1.5rem;
+ }
+
+ .AddTextContainer .Text {
+   width: 90%;
+ }
+
+ .AddTextContainer .Text img {
+   position: relative;
+   top: 2.7rem;
+   left: 3%;
+
+ }
+
+ .AddTextContainer input {
+   width: 100%;
+   padding-left: 2.7rem;
+   height: 3rem;
+   font-size: 1.1rem;
+ }
+
+ .AddTextContainer .Submit {
+   margin-right: 2rem;
+   margin-top: .5rem;
+ }
+
+ /* ----------------------------UserNavbarContainer---------------------------------------- */
+ .UserNavbarContainer {
+   display: flex;
+   align-items: center;
+
+ }
+
+ .UserNavbarSection {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: white;
+   box-shadow: 0 1px 5px var(--text-color);
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   padding: .5rem 1rem;
+ }
+
+ .UserNavbarSection .UserName {
+   margin-left: 1rem;
+ }
+
+ /* -------------------------------------- UpComingLecture section---------------------------------*/
+ .UpComingLectureBoxs {
+   width: 25%;
+   line-height: 1.2rem;
+   padding: .5rem 1rem 1.5rem 1rem;
+   border-radius: .5rem;
+   margin-bottom: 2rem;
+   border: 2px solid var(--text-color);
+ }
+
+ .UpComingLectureBoxs:hover {
+   background-color: var(--text-color);
+   color: white;
+ }
+
+ .UpComingLectureBoxs:active {
+   background-color: var(--text-color);
+   color: white;
+ }
+
+ .UpComingLectureDate p {
+   margin-left: 10rem;
+   margin-bottom: .5rem;
+ }
+
+ .TextSection span img {
+   position: relative;
+   display: inline;
+   top: 2rem;
+   margin-left: 8rem;
+ }
+
+ .UpComingLectureSection {
+   width: 100%;
+ }
+
+ .UpComingLectureContainer {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .TextSection {
+   display: inline;
+   padding: 0rem 1rem;
+ }
+
+
+ /* ------------------------------------------UpComingLecturePageSection------------------------------------------ */
+ .UpComingLecturePageSection {
+   width: 100%;
+ }
+
+ .UpComingLecturePageContainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 2rem;
+ }
+
+ .UpComingLecturePageContainer h1 {
+   margin-bottom: 1rem;
+ }
+
+
+ /*----------------------------------------------StudentAddSection-------------------------------------------------------*/
+ .StudentAddSection {
+   width: 100%;
+ }
+
+ .StudentAddContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 5rem;
+ }
+
+ .StudentAdd {
+   padding: 1rem;
+   border-radius: .4rem;
+   border: 2px solid var(--text-color);
+ }
+
+ .StudentAddInputSection label {
+   display: inline;
+   font-size: 1rem;
+ }
+
+ .StudentAdd h2 {
+   margin-left: 6rem;
+ }
+.StudentEmail{
+  margin-top: .7rem;
+}
+ /* ----------------------------------input--------------------------- */
+ .StudentAddInputSection input {
+   margin-left: 1.5rem;
+   width: 60%;
+ }
+
+ .StudentAdd img {
+   margin-top: 1rem;
+   margin-left: 8rem;
+ }
+
+ input {
+   height: 2.4rem;
+   padding: 0rem 1rem;
+   border-radius: 2rem;
+   font-size: .9rem;
+   border: 2px solid rgb(176, 175, 175);
+   background-color: white;
+ }
+
+ input:focus {
+   border: 2px solid var(--text-color);
+ }
+
+ .StudentAddInputSection {
+   margin-top: 1rem;
+ }
+
+ .StudentAddInputSection .course {
+   margin-top: 1rem;
+ }
+
+ .StudentAddInputSection .Batch {
+   margin-top: 1rem;
+ }
+
+ select {
+   margin-left: .5rem;
+   border-radius: .2rem;
+   padding: .5rem;
+ }
+
+ select:focus {
+   border: 2px solid var(--text-color);
+ }
+
+ .Instructor {
+   margin-top: 1rem;
+ }
+
+ /* ------------------Submit------------------------ */
+ .Submit {
+   margin-top: 2rem;
+   padding: .8rem 7rem;
+   color: white;
+   font-size: 1rem;
+   margin-left: 2rem;
+   border-radius: 2rem;
+   margin-bottom: 1rem;
+   background-color: var(--text-color);
+   transition: 1s linear box-shadow;
+ }
+
+ .Submit:active {
+   background-color: rgb(0, 57, 77);
+ }
+
+ /* ---------------------------UpComingLectureTeacherSection-------------- */
+ .UpComingLectureTeacherSection {
+   width: 100%;
+ }
+
+ .UpComingLectureTeacherContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 2rem;
+ }
+
+ .UpComingLecture h1 {
+   margin-top: 3rem;
+   margin-left: 4rem;
+ }
+
+ .UpComingLectureTeacherBox {
+   margin-top: 2rem;
+   width: 100%;
+ }
+
+ .AddLecture {
+   position: fixed;
+   bottom: 4rem;
+   right: 1rem;
+   background-color: var(--text-color);
+   color: white;
+   display: inline-block;
+   padding: 1rem 1.5rem;
+   font-size: 1.2rem;
+   border-radius: 2rem;
+ }
+
+ .AddLecture:active {
+   background-color: rgb(1, 53, 72);
+ }
+
+ .AddLecture span {
+   margin-right: .5rem;
+ }
+
+ /* -----------------------------AddLectureSection--------------------------------- */
+ .AddLectureSection {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .AddLectureContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 1rem;
+   border-radius: .5rem;
+   border: 2px solid var(--text-color);
+   margin-top: 3rem;
+   width: 50%;
+ }
+
+ .AddLectureInputSection label {
+   font-size: 1rem;
+ }
+
+ .AddLectureInputSection input {
+   margin-left: 1rem;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+ }
+
+ .AddLectureInputSection textarea {
+   margin-left: 3rem;
+ }
+
+ .AddLectureContainer img {
+   margin-top: 1rem;
+ }
+
+ .WeakDays {
+   margin-top: .5rem;
+   margin-bottom: 1rem;
+ }
+
+ /* ---------------------------------UserMessageContainer-------------------------- */
+ .UserMessageSection {
+   display: inline-block;
+   padding: 1rem 2rem;
+   border-radius: .3rem;
+   color: var(--text-color);
+   margin-bottom: 1rem;
+   margin-left: 40%;
+   border: 2px solid var(--light-gray);
+ }
+
+ .UserMessageSection p {
+   line-height: 1.3rem;
+ }
+
+ /* -----------------------------------UserDetailContainer------------------------- */
+
+ .DisplaySection {
+   margin-top: 5rem;
+   width: 100%;
+   height: 50%;
+ }
+
+ /* ------------------------------------BottomNavbar section--------------------------------------------------- */
+.BottomNavbarContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: .5rem 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 4rem;
+  box-shadow: 1px 0px 5px var(--text-color);
+  background-color: white;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+.BottomNavbarSection{
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.BottomNavbarBox{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.BottomNavbarBox:nth-child(4){
+  margin-top: .2rem;
+}
+.BottomNavbarBox .bell img{
+  margin-left: .4rem;
+}
+.BottomNavbarBox span{
+  font-size: .9rem;
+  display: inline-block;
+  position: relative;
+  bottom: .9rem;
+font-weight: 900;
+  color: rgb(184, 2, 108)
+}
+.BottomNavbarTextContent{
+  padding-top: .2rem;
+}
+
+/* ------------------------------------------------------------NotificationPageContainer------------------------------- */
+.NotificationPageSection{
+  width: 100%;
+}
+.NotificationDisplayContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 6rem;
+}
+.NotificationList{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.NotificationBox{
+  margin-top: 1rem;
+  border: 2px solid var(--text-color);
+  border-radius: .5rem;
+  width: 80%;
+  padding: .5rem 1rem;
+  text-align: center;
+}
+.NotificationBox p{
+  font-size: 1.1rem;
+}
+.NotificationBox:hover{
+  color: white;
+  background-color: var(--text-color);
+}
+.NotificationBox::after{
+  color: white;
+  background-color: var(--text-color);
+}
+/* ----------------------------------------RoadMapConatiner------------------------------------------- */
+.RoadMapContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 6rem;
+}
+
+
+
+ /* -----------------------------media query section------------------- */
+ @media only screen and (max-width:600px) {
+
+   /* ------------------------------------login/register form------------------------------------ */
+   .html {
+     overflow-x: hidden;
+   }
+
+   .Container {
+     width: 100%;
+     height: 100vh;
+     margin-top: 0;
+   }
+
+   .PageContainer {
+     padding: .5rem 1rem;
+     width: 100%;
+     height: 100vh;
+   }
+
+   .HeaderContainer {
+     width: 100%;
+     margin-top: 3rem;
+   }
+
+   .UserProfileSection img {
+     margin-top: 2rem;
+   }
+
+   .InputSection {
+     margin-top: 1rem;
+   }
+
+   .InputSection input {
+     /* margin-left: 1rem; */
+     width: 22rem;
+     font-size: 1rem;
+     height: 3.5rem;
+     margin-top: 1rem;
+   }
+
+   .InputSection input:focus {
+     border: 2px solid var(--text-color);
+   }
+
+   .forgetPassword p {
+     margin-left: 1rem;
+     margin-top: 1rem;
+   }
+
+   .Button button {
+     height: 3.5rem;
+   }
+
+   /* ---------------------register part---------------------- */
+   .sepration {
+     margin-top: 2rem;
+     margin-bottom: 2rem;
+     height: .01rem;
+     width: 70%;
+     margin-left: 3rem;
+     background-color: gray;
+   }
+
+   .RegisterText p {
+     text-align: center;
+     margin-left: rem;
+     font-size: .8rem;
+     color: gray;
+   }
+
+
+   /* --------------------------------------role play section------------------------------------------ */
+   .ModeSection {
+     width: 100%;
+     flex-direction: column;
+   }
+
+   .RoleBox:hover {
+     color: white;
+     background-color: var(--text-color);
+   }
+
+   .RoleBox:active {
+     color: white;
+     background-color: var(--text-color);
+   }
+
+   .MainContainer h2 {
+     font-size: 1.2rem;
+     margin-left: 9rem;
+   }
+
+   .RoleBox {
+     text-align: center;
+     width: 80%;
+     height: 10rem;
+     border-radius: .8rem;
+     margin-top: 3rem;
+     padding: 1rem 3rem;
+     padding-left: 4rem;
+     border: 2px solid var(--text-color);
+   }
+
+   .UnderLine {
+     margin-top: .5rem;
+     margin-left: 1.2rem;
+     margin-bottom: 1rem;
+     height: .1rem;
+     width: 80%;
+     background-color: var(--text-color);
+   }
+
+   .UnderLine:hover {
+     background-color: white;
+   }
+
+   .UnderLine:active {
+     background-color: white;
+   }
+
+   .StudentSection p {
+     text-align: center;
+   }
+
+   .RoleIcon {
+     height: 8rem;
+     width: 4rem;
+     position: relative;
+     top: .5rem;
+   }
+
+   /* -------------------------------------- UpComingLecture section---------------------------------*/
+   .UpComingLectureBoxs {
+     padding: 0rem 1rem;
+     width: 80%;
+   }
+
+   .UpComingLectureDateAndDaySection {
+     display: flex;
+     justify-content: space-between;
+   }
+
+   .UpComingLectureDay {
+     margin-top: .5rem;
+     display: inline-block;
+   }
+
+   .UpComingLectureDate {
+     display: inline-block;
+   }
+
+   .UpComingLectureDate p {
+     margin-top: .5rem;
+     margin-left: 4.5rem;
+   }
+
+   /* ---------------------------AdStudent Section----------------------- */
+   /* .StudentAdd{
+  border: none;
+} */
+   .StudentAdd h2 {
+     margin-left: 8rem;
+   }
+
+   .StudentAdd img {
+     margin-left: 9rem;
+   }
+
+   .StudentAddInputSection {
+     margin-top: 2rem;
+   }
+
+   .StudentAddInputSection .Submit {
+     margin-top: 3rem;
+     margin-left: 4rem;
+   }
+
+   .AddLectureContainer {
+     width: 90%;
+   }
+
+   .WeakDays {
+     margin-top: .5rem;
+     margin-bottom: 1rem;
+   }
+
+   .WeakDays option {
+     margin-bottom: 1.5rem;
+   }
+
+   .AddLectureContainer .AddLectureInputSection {
+     margin-top: 2rem;
+   }
+
+   .AddLectureInputSection textarea {
+     margin-left: 1rem;
+     padding: .5rem;
+     font-size: 1rem;
+     border-radius: .2rem;
+   }
+
+   .AddLectureInputSection textarea:active {
+     border: 2px solid var(--text-color);
+   }
+ }
