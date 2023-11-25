@@ -25,8 +25,12 @@
  }
 
  body {
+   overflow-x: hidden;
    background-color: var(--background-color);
  }
+ /* Link{
+  color: white;
+ } */
 
  /* --------------------------------------------------login / register section--------------------------------------------- */
  .Container {
@@ -34,6 +38,8 @@
    justify-content: center;
    align-items: center;
    margin-top: 8rem;
+   height: 100%;
+   overflow-x: hidden;
    width: 100%;
  }
 
@@ -72,8 +78,14 @@
  }
 
  .SignUp a {
+   font-size: 1.1rem;
    font-weight: 600;
    color: var(--text-color)
+ }
+
+ .InputSection {
+   width: 100%;
+   margin-left: 2rem;
  }
 
  .InputSection input {
@@ -101,8 +113,10 @@
 
  .Button button {
    border-radius: 1rem;
-   width: 100%;
-   margin-top: 1.5rem;
+   width: 20rem;
+   margin-top: 4rem;
+   position: relative;
+   right: 4rem;
    height: 2.5rem;
    font-size: .9rem;
    background-color: var(--text-color);
@@ -165,6 +179,10 @@
    margin-top: 2rem;
  }
 
+ .ResetPasswordInputSection {
+   margin-top: 2rem;
+ }
+
  .ResetPasswordInputSection input {
    width: 100%;
    height: 3rem;
@@ -201,6 +219,7 @@
    align-items: center;
    flex-wrap: wrap;
    width: 30rem;
+   margin-top: 2rem;
  }
 
  .UnderLine {
@@ -250,7 +269,7 @@
 
  .SearchSection {
    display: flex;
-   height:2.8rem;
+   height: 2.8rem;
    width: 18rem;
    font-size: 1.2rem;
    padding: 0 1rem 0 1rem;
@@ -276,7 +295,7 @@
    border-radius: 50%;
    text-align: center;
    padding-left: .1rem;
-   padding-top: .7rem;
+   padding-top: .6rem;
    background-color: var(--text-color);
  }
 
@@ -356,6 +375,9 @@
  .AddUserSection p {
    font-size: 1.1rem;
  }
+ .AddUserSection span{
+  margin-right: .5rem;
+ }
 
  /* ----------------------------------StudentListSection---------------------------------------------- */
 
@@ -363,6 +385,15 @@
    display: flex;
    align-items: center;
    padding: .5rem 1rem;
+   /* justify-content: space-between; */
+
+ }
+
+ .StudentBoxss {
+   display: flex;
+   align-items: center;
+   padding: .5rem 1rem;
+   justify-content: space-between;
 
  }
 
@@ -372,9 +403,10 @@
    border-radius: 50%;
    background-color: var(--text-color);
    text-align: center;
-   padding-top: .5rem;
-   font-size: 1.7rem;
+   padding-top: .6rem;
+   font-size: 1.5rem;
    color: white;
+   flex: 0 0 47px;
  }
 
  .StudentName {
@@ -390,8 +422,15 @@
    margin-bottom: .5rem;
    background-color: gray;
  }
- .StudentEmail{
-  display: none;
+
+ .StudentEmail {
+   display: none;
+ }
+
+ .StudentTextSection {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
  }
 
  /* ---------------------------------------------StudentDataList------------------------------------------- */
@@ -408,7 +447,7 @@
    justify-content: center;
    align-items: center;
    width: 100%;
-   height: 100vh;
+   /* height: 100vh; */
  }
 
  .AddTextContainer {
@@ -416,29 +455,36 @@
    left: 0;
    bottom: 0;
    width: 100%;
-   height: 18vh;
+   height: 10vh;
    display: flex;
    align-items: center;
-   flex-direction: column;
    background-color: white;
    border-top-right-radius: 1.5rem;
    border-top-left-radius: 1.5rem;
+   padding-bottom: 2rem;
+   padding-left: 2rem;
  }
 
  .AddTextContainer .Text {
-   width: 90%;
+   width: 100%;
  }
 
  .AddTextContainer .Text img {
    position: relative;
    top: 2.7rem;
    left: 3%;
+ }
 
+ .AddTextContainer .image {
+   position: relative;
+   right: 2.7rem;
+   top: 1.1rem;
  }
 
  .AddTextContainer input {
    width: 100%;
    padding-left: 2.7rem;
+   padding-right: 2.9rem;
    height: 3rem;
    font-size: 1.1rem;
  }
@@ -501,7 +547,7 @@
    position: relative;
    display: inline;
    top: 2rem;
-   margin-left: 8rem;
+   margin-left: 7.5rem;
  }
 
  .UpComingLectureSection {
@@ -530,13 +576,11 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   margin-top: 2rem;
  }
 
- .UpComingLecturePageContainer h1 {
-   margin-bottom: 1rem;
+ .NotificationNavbarContainer {
+   margin-right: 3rem;
  }
-
 
  /*----------------------------------------------StudentAddSection-------------------------------------------------------*/
  .StudentAddSection {
@@ -547,7 +591,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   margin-top: 5rem;
+   margin-top: 8rem;
  }
 
  .StudentAdd {
@@ -564,9 +608,11 @@
  .StudentAdd h2 {
    margin-left: 6rem;
  }
-.StudentEmail{
-  margin-top: .7rem;
-}
+
+ .StudentEmail {
+   margin-top: .7rem;
+ }
+
  /* ----------------------------------input--------------------------- */
  .StudentAddInputSection input {
    margin-left: 1.5rem;
@@ -644,7 +690,6 @@
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   margin-top: 2rem;
  }
 
  .UpComingLecture h1 {
@@ -653,16 +698,15 @@
  }
 
  .UpComingLectureTeacherBox {
-   margin-top: 2rem;
+   margin-top: 5rem;
    width: 100%;
  }
 
  .AddLecture {
    position: fixed;
-   bottom: 4rem;
+   bottom: 8rem;
    right: 1rem;
    background-color: var(--text-color);
-   color: white;
    display: inline-block;
    padding: 1rem 1.5rem;
    font-size: 1.2rem;
@@ -673,11 +717,20 @@
    background-color: rgb(1, 53, 72);
  }
 
+ .AddLecture p{
+  color: white;
+ }
  .AddLecture span {
    margin-right: .5rem;
  }
 
  /* -----------------------------AddLectureSection--------------------------------- */
+ .AddLectureNavbar{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+
+ }
  .AddLectureSection {
    display: flex;
    justify-content: center;
@@ -692,7 +745,7 @@
    padding: 1rem;
    border-radius: .5rem;
    border: 2px solid var(--text-color);
-   margin-top: 3rem;
+   margin-top: 9rem;
    width: 50%;
  }
 
@@ -720,13 +773,21 @@
  }
 
  /* ---------------------------------UserMessageContainer-------------------------- */
+ .UserMessageContainer {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   width: 70%;
+ }
+
  .UserMessageSection {
+   margin-right: .5rem;
    display: inline-block;
-   padding: 1rem 2rem;
-   border-radius: .3rem;
-   color: var(--text-color);
-   margin-bottom: 1rem;
-   margin-left: 40%;
+   padding: .5rem 1rem;
+   border-radius: .5rem;
+   color: white;
+   margin-bottom: .5rem;
+   background-color: var(--text-color);
    border: 2px solid var(--light-gray);
  }
 
@@ -737,103 +798,736 @@
  /* -----------------------------------UserDetailContainer------------------------- */
 
  .DisplaySection {
+   display: flex;
+   justify-content: flex-end;
+   flex-direction: column;
+   align-items: flex-end;
    margin-top: 5rem;
    width: 100%;
-   height: 50%;
+   margin-bottom: 4rem;
+   /* height: 50%; */
  }
 
  /* ------------------------------------BottomNavbar section--------------------------------------------------- */
-.BottomNavbarContainer{
+ .BottomNavbarContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: .5rem 1rem;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   height: 4rem;
+   box-shadow: 1px 0px 5px var(--text-color);
+   background-color: white;
+   border-top-right-radius: 1rem;
+   border-top-left-radius: 1rem;
+ }
+
+ .BottomNavbarSection {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .BottomNavbarBox {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+ }
+
+ .BottomNavbarBox:nth-child(4) {
+   margin-top: 0rem;
+ }
+
+ .BottomNavbarBox .bell img {
+   margin-left: .4rem;
+   margin-top: .3rem;
+ }
+
+ .BottomNavbarBox span {
+   font-size: .9rem;
+   display: inline-block;
+   position: relative;
+   bottom: .9rem;
+   font-weight: 900;
+   color: rgb(184, 2, 108)
+ }
+
+ .BottomNavbarTextContent {
+   padding-top: .2rem;
+ }
+
+ /* ------------------------------------------------------------NotificationPageContainer------------------------------- */
+ .NotificationContainer {
+   overflow-x: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+ }
+
+ .NotificationSection {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 80%;
+ }
+
+ .NotificationContainer .NotificationBox {
+   display: flex;
+   align-items: baseline;
+   width: 100%;
+   flex-direction: column;
+ }
+
+ .NotificationContainer .UpperContainer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: .5rem .5rem;
+   width: 100%;
+ }
+
+ .UserMessage h3 {
+   color: rgb(83, 83, 83)
+ }
+
+ .SecondContainer {
+   margin-top: .2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: .5rem;
+ }
+
+ .date {
+   margin-left: 61rem;
+ }
+
+ .thirdContainer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   margin-top: 1rem;
+   padding-bottom: .5rem;
+ }
+
+ .thirdContainer p span {
+   text-align: center;
+   height: 3rem;
+   width: 3rem;
+   padding: .7rem;
+   border-radius: 50%;
+   background-color: var(--text-color);
+ }
+
+ .thirdContainer p span i {
+   rotate: 90deg;
+   color: white;
+ }
+
+
+
+
+ /* ------------------------------------------------NotificationContainer--------------------------------------- */
+ .NotificationPageSection {
+   width: 100%;
+ }
+
+ .NotificationDisplayContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+   margin-top: .8rem;
+ }
+
+ .NotificationList {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+   margin-top: 4rem;
+   margin-bottom: 5rem;
+ }
+
+ .NotificationBox {
+   margin-top: 1rem;
+   border: 2px solid var(--text-color);
+   border-radius: .5rem;
+   width: 80%;
+   padding: .5rem 1rem;
+   text-align: center;
+ }
+
+ .NotificationBox p {
+   font-size: 1.1rem;
+ }
+
+ .NotificationBox:hover {
+   color: white;
+   background-color: var(--text-color);
+ }
+
+ .NotificationBox::after {
+   color: white;
+   background-color: var(--text-color);
+ }
+
+ /* ----------------------------------------RoadMapConatiner------------------------------------------- */
+ .RoadMapContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   /* margin-top: 6rem; */
+ }
+
+ .RoadMapNavbar {
+   display: flex;
+   justify-content: flex-start !important;
+   align-items: center;
+ }
+
+ .RoadMapTextSection {
+   margin-left: 45%;
+ }
+
+ .NavbarMenuSection {
+   padding: 1rem 1rem 0 1rem;
+   margin-top: 3.3rem;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: var(--text-color);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: white;
+   font-size: 1rem;
+ }
+
+ .NavbarMenuSection .active {
+   padding: .5rem;
+   background-color: white;
+   color: black;
+   border-top-right-radius: .5rem;
+   border-top-left-radius: .5rem;
+   font-weight: 600;
+ }
+
+ .MenuNavbar li {
+   list-style: none;
+ }
+
+ .MenuNavbar {
+   position: absolute;
+   top: 3.15rem;
+   left: -20rem;
+   color: white;
+   line-height: 3rem;
+   border-bottom-right-radius: .5rem;
+   background-color: var(--text-color);
+   transition: .4s linear;
+   height: 100vh;
+ }
+
+ .MenuNavbar.active {
+   left: 0;
+   padding: 1rem 2rem 1rem 2rem;
+ }
+
+ .button {
+   padding-bottom: .2rem;
+ }
+
+ /* -------------------------------------------------Profile------------------------------------ */
+ .ProfileContainer {
+   width: 100%;
+   position: fixed;
+   bottom: -15rem;
+   left: 0;
+   transition: bottom .4s linear;
+ }
+
+ .ProfileContainer.active {
+   bottom: 0rem;
+ }
+
+ .profileContainerss {
+   width: 100%;
+   border-top-right-radius: 2rem;
+   border-top-left-radius: 2rem;
+   padding: 1rem .5rem;
+   background-color: white;
+ }
+
+ .Profile {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+ }
+
+ .Profile span {
+   height: 3rem;
+   width: 3rem;
+   border-radius: 50%;
+   color: white;
+   display: inline-block;
+   text-align: center;
+   font-size: 1.2rem;
+   padding-top: .8rem;
+   background-color: var(--text-color);
+ }
+
+ .Profile div {
+   margin-left: .5rem;
+ }
+
+ .EditSection {
+   display: inline-block;
+   padding: .5rem 1rem;
+   margin-left: 5rem;
+   border: 1px solid var(--light-gray);
+   border-radius: 1.2rem;
+   /* cursor: pointer; */
+ }
+
+ .EditSection .Edit {
+   margin-left: .5rem;
+ }
+
+ .seprationTwoDiv {
+   height: .02rem;
+   width: 80%;
+   margin-left: 2rem;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   background-color: gray;
+ }
+
+ .Button {
+   margin-left: 20%;
+   margin-top: -2rem;
+   width: 40%;
+ }
+
+ /* -----------------------------------------------ProfileEditSection---------------------------------------- */
+ .ProfileEditSection .UpperSection {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: .5rem 2rem .7rem 1.5rem;
+   box-shadow: 0 1px 5px var(--text-color);
+ }
+
+ .ProfileEditSection .UpperSection span {
+   font-size: 1.2rem;
+ }
+
+ .ProfileEditSection .UpperSection span:nth-child(2) {
+   font-size: 1.2rem;
+   font-weight: 600;
+   margin-left: 1.5rem;
+ }
+
+ .ProfileEdit {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   margin-top: 3rem;
+   flex-direction: column;
+ }
+
+ .ProfilePhoto {
+   height: 7rem;
+   width: 7rem;
+   border-radius: 50%;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   align-items: center;
+   text-align: center;
+   /* border: 2px solid var(--text-color); */
+ }
+
+ .ProfileEdit input {
+   background-color: transparent;
+   border: none;
+   margin-left: 5rem;
+   margin-top: 1rem;
+
+ }
+
+ .ProfileEdit div:first-child {
+   border-bottom: 1px solid var(--text-color);
+ }
+
+ .ProfileEdit div:nth-child(2) {
+   border-bottom: 1px solid var(--text-color);
+ }
+
+ .ProfileDetailSection {
+   margin-top: 2rem;
+   line-height: 2rem;
+ }
+
+ .ProfileDetailSection p {
+   font-size: 1.2rem;
+ }
+
+ .ProfileEdit .Submit {
+   margin-top: 4rem;
+   margin-right: 2rem;
+ }
+
+ /* -----------------------------------------------------PresentContainer---------------------------------- */
+ .StudentDataListSection {
+   margin-top: 7.5rem;
+   margin-bottom: 4rem;
+ }
+
+ .PresentContainer .Navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+ }
+
+ .PresentSection {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+ }
+
+ .DownloadSection {
+   background-color: var(--text-color);
+   color: white;
+   font-weight: 500;
+   font-size: .8rem;
+   padding: .5rem 1rem;
+   border-radius: 2rem;
+   cursor: pointer;
+ }
+
+ .DifferentButtonSection {
+   width: 100%;
+   height: 4rem;
+   background-color: var(--text-color);
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   margin-right: .5rem;
+   margin-top: 3rem;
+ }
+
+ .DifferentButtonSection .button {
+   margin-top: 1.5rem;
+   margin-left: .5rem;
+   border-top-right-radius: .5rem;
+   border-top-left-radius: .5rem;
+   padding: .5rem 1rem;
+   font-size: .9rem;
+   font-weight: 600;
+   color: white;
+   transition: active .3s linear;
+ }
+
+ .DifferentButtonSection .active {
+   margin-top: 1.5rem;
+   margin-left: .5rem;
+   border-top-right-radius: .5rem;
+   border-top-left-radius: .5rem;
+   padding: .5rem 1rem;
+   font-size: .9rem;
+   font-weight: 600;
+   background-color: white;
+   color: var(--text-color);
+ }
+
+ .DifferentButtonSection span {
+   margin-left: .5rem;
+   position: relative;
+   bottom: 0.2rem;
+ }
+
+ /* ------------------------------------------StudentListPresenty---------------------------------- */
+ .Attendance {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .AttendanceButton {
+   height: 2.4rem;
+   width: 2.4rem;
+   padding-top: .4rem;
+   font-size: 1.2rem;
+   text-align: center;
+   border-radius: 50%;
+   color: white;
+   margin-left: .8rem;
+ }
+
+ .AttendanceButton:first-child {
+   border: 2px solid rgb(2, 97, 2);
+   background-color: rgb(2, 97, 2);
+ }
+
+ .AttendanceButton:first-child:hover {
+   background-color: rgb(1, 67, 1);
+ }
+
+ .AttendanceButton:nth-child(2) {
+   border: 2px solid red;
+   background-color: rgb(210, 23, 23);
+ }
+
+ .AttendanceButton:nth-child(2):hover {
+   background-color: red;
+ }
+
+ .AttendanceButton:nth-child(2):focus {
+   background-color: red;
+ }
+
+ /* --------------------------------------NotificationNavbar--------------------- */
+
+ .NotificationNavbar {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   padding-top: .7rem;
+   padding-left: .5rem;
+   padding-right: .5rem;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   box-shadow: 0 1px 7px var(--text-color);
+   background-color: white;
+   z-index: 1000;
+ }
+
+ .NotificationTextSection {
+   font-size: 1.1rem;
+ }
+
+ .Clear {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+ }
+ .NotificationHeader{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: .5rem 1rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 4rem;
-  box-shadow: 1px 0px 5px var(--text-color);
-  background-color: white;
-  border-top-right-radius: 1rem;
-  border-top-left-radius: 1rem;
-}
-.BottomNavbarSection{
-  display: flex;
-  width:100%;
   justify-content: space-between;
   align-items: center;
-}
-.BottomNavbarBox{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+ }
 
-.BottomNavbarBox:nth-child(4){
-  margin-top: .2rem;
-}
-.BottomNavbarBox .bell img{
-  margin-left: .4rem;
-}
-.BottomNavbarBox span{
-  font-size: .9rem;
-  display: inline-block;
-  position: relative;
-  bottom: .9rem;
-font-weight: 900;
-  color: rgb(184, 2, 108)
-}
-.BottomNavbarTextContent{
-  padding-top: .2rem;
-}
+ /* ---------------------------------------SelectModeNavbar--------------------- */
+ .SelectModeNavbar {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   padding-top: .7rem;
+   padding-left: .5rem;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+ }
 
-/* ------------------------------------------------------------NotificationPageContainer------------------------------- */
-.NotificationPageSection{
-  width: 100%;
+ .SelectModeTextSection {
+   margin-left: 6.5rem;
+   font-size: 1rem;
+ }
+
+ /* ----------------------------------------RoadMapSection------------------ */
+ 
+   .RoadMapSection {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 2.95rem;
+ }
+
+ /* --------------------------------------UpComingLectureSection--------------------------------- */
+ .NotificationTextSectionss {
+   margin-left: 3.5rem;
+   font-size: 1.1rem;
+ }
+
+ .AllComingLecture {
+   margin-top: 4.5rem;
+ }
+
+ /* --------------------------------------------------------MapContainer----------------------------- */
+ .MapContainer {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .MapSection {
+   margin-top: 10rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+ }
+
+ .MapBox {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-radius: 1rem;
+   text-align: center;
+   padding: 1rem 1rem;
+   width: 90%;
+   background-color: white;
+   margin-bottom: 2rem;
+ }
+
+ .MapBoxTextContainer ul li {
+   font-size: .9rem;
+   color: rgb(127, 127, 127);
+ }
+
+ .MapBox h3 {
+   color: var(--text-color);
+ }
+
+ .MapBoxTextContainer {
+   line-height: 2rem;
+ }
+
+ .MapBoxTextContainer .Green {
+   color: #3fdb86;
+   font-weight: 600;
+ }
+
+ .MapBoxTextContainer .Red {
+   color: red;
+   font-weight: 600;
+ }
+
+ .footerTextCircularSection {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100;
+
+ }
+
+ .sepp {
+   margin-right: 3rem;
+ }
+
+ .footerTextCircularSection p {
+   color: var(--text-color);
+   line-height: 1rem;
+   font-size: .8rem;
+ }
+
+ /* ----------------------------------------------------RoadMapDataContainer----------------------------------------------- */
+ .RoadMapDataContainer {
+   overflow-x: hidden;
+   margin-bottom: 5rem;
+ }
+
+ .RoadMapDataContainer ul {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem 1rem 0 1rem;
+   margin-top: 3.3rem;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: var(--text-color);
+ }
+
+ 
+ .RoadMapDataContainer ul li {
+   list-style: none;
+ }
+ .RoadMapDataContainer ul li button {
+   font-size: 1rem;
+   color: white;
+   background-color: transparent;
+   padding: .5rem;
+ }
+.RoadMapDataContainer ul li button:focus {
+   padding: .5rem;
+   background-color: white;
+   color: black;
+   border-top-right-radius: .5rem;
+   border-top-left-radius: .5rem;
+   font-weight: 600;
+ }
+ .RoadMapDataContainer ul li button:hover {
+  padding: .5rem;
+  background-color: white;
+  color: black;
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+  font-weight: 600;
 }
-.NotificationDisplayContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 6rem;
+.SelectCourse{
+  margin-top: 8rem;
+  margin-left:.5rem;
+  font-size: 1rem;
+  font-weight: 700;
 }
-.NotificationList{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
-.NotificationBox{
+.Detail{
   margin-top: 1rem;
-  border: 2px solid var(--text-color);
-  border-radius: .5rem;
-  width: 80%;
-  padding: .5rem 1rem;
-  text-align: center;
 }
-.NotificationBox p{
-  font-size: 1.1rem;
+.Detail p{
+  margin-top: 1rem;
+  margin-left: .5rem;
+  font-size: .9rem;
 }
-.NotificationBox:hover{
-  color: white;
-  background-color: var(--text-color);
-}
-.NotificationBox::after{
-  color: white;
-  background-color: var(--text-color);
-}
-/* ----------------------------------------RoadMapConatiner------------------------------------------- */
-.RoadMapContainer{
+.suggestion{
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin-top: 6rem;
+  color: var(--text-color);
+  font-weight: 600;
+  justify-content: center;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
+.Detail img ,iframe{
+  border-radius: 1rem;
+}
+.spp{
+  margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -925,9 +1619,8 @@ font-weight: 900;
      background-color: var(--text-color);
    }
 
-   .MainContainer h2 {
-     font-size: 1.2rem;
-     margin-left: 9rem;
+   .MainContainer h1 {
+     font-size: 1.5rem;
    }
 
    .RoleBox {
@@ -937,6 +1630,8 @@ font-weight: 900;
      border-radius: .8rem;
      margin-top: 3rem;
      padding: 1rem 3rem;
+     font-size: 1.05rem;
+     margin-bottom: 1rem;
      padding-left: 4rem;
      border: 2px solid var(--text-color);
    }
@@ -959,6 +1654,7 @@ font-weight: 900;
    }
 
    .StudentSection p {
+     margin-bottom: .5rem;
      text-align: center;
    }
 
@@ -967,6 +1663,18 @@ font-weight: 900;
      width: 4rem;
      position: relative;
      top: .5rem;
+   }
+
+   .sepSelectMode {
+     margin-top: 9rem;
+     margin-right: 3rem;
+   }
+
+   .SelectModeFooter {
+     color: var(--text-color);
+     font-size: .75rem;
+     padding: 0rem 1.5rem;
+     text-align: center;
    }
 
    /* -------------------------------------- UpComingLecture section---------------------------------*/
@@ -1012,11 +1720,21 @@ font-weight: 900;
 
    .StudentAddInputSection .Submit {
      margin-top: 3rem;
-     margin-left: 4rem;
+     margin-left: 3rem;
    }
 
    .AddLectureContainer {
      width: 90%;
+   }
+   .AddLectureNavbar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 1px 5px var(--text-color);
+   }
+   .AddLectureNavbarTextSection{
+    margin-left: 6rem;
    }
 
    .WeakDays {
@@ -1042,4 +1760,18 @@ font-weight: 900;
    .AddLectureInputSection textarea:active {
      border: 2px solid var(--text-color);
    }
+
+   .date {
+     margin-left: 6rem;
+   }
+
+   .footerTextCircularSection {
+     text-align: center;
+     width: 90%;
+   }
+
+   .RoadMapTextSection {
+     margin-left: 25%;
+   }
+
  }

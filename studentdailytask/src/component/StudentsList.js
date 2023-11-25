@@ -14,7 +14,6 @@ export default class StudentsList extends Component {
         // console.log(check)
         localStorage.setItem("ClickPaticularUser", value)
         alert("click")
-        // console.log(value)
     }
     render() {
         return (
@@ -23,8 +22,7 @@ export default class StudentsList extends Component {
                     <div className="StudentListContainer">
                         <div className="StudentBox" onClick={() => { this.ClickTheProfile(`${this.props.StudentName}`) }}>
                             <div className='StudentProfile'>{this.props.ProfileName}</div>
-                            <div className='StudentName'>{this.props.StudentName}</div>
-                            {/* <div className='StudentEmail'>{this.props.StudentEmail}</div> */}
+                            <div className='StudentName'><p>{this.props.StudentName}</p></div>
                         </div>
                         <div className='BreakPoint'></div>
                     </div>

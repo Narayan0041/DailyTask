@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import UpComingLecture from '../component/UpComingLecture'
+import UpcomigLectureNavbar from '../component/UpcomigLectureNavbar';
 
 export default class UpComingLecturePage extends Component {
     constructor(props) {
@@ -8,7 +9,7 @@ export default class UpComingLecturePage extends Component {
             AddLectureSectionGetData: []
         }
     }
-        componentDidMount() {
+    componentDidMount() {
         const StudentSection = localStorage.getItem("AddLectureData");
         if (StudentSection) {
             let parseData = JSON.parse(StudentSection);
@@ -20,12 +21,13 @@ export default class UpComingLecturePage extends Component {
             <>
                 <div className="UpComingLecturePageSection">
                     <div className="UpComingLecturePageContainer">
-                        <h1>Upcoming Lecture</h1>
-                        <div>
+                    <UpcomigLectureNavbar NavbarValue={"UpComing Lecture"}/>
+
+                        <div className='AllComingLecture'>
                             {
                                 this.state.AddLectureSectionGetData.map((data, index) => {
-                                    return(
-                                       <UpComingLecture Day={data.Day} Date={data.Date} LectureDetail={data.TextArea}/> 
+                                    return (
+                                        <UpComingLecture Day={data.Day} Date={data.Date} LectureDetail={data.TextArea} />
                                     )
                                 })
                             }

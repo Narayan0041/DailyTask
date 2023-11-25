@@ -10,27 +10,30 @@ export default class UserDetail extends Component {
       "UserPaticularData": [],
       "PaticulatUserName": ""
     }
+    // textUpdate = {
+    //   "TextValue": false
+    // }
   }
   componentDidMount = () => {
-    let UserDetailAdd = localStorage.getItem("UserDetailAdd") ? JSON.parse(localStorage.getItem("UserDetailAdd")) : [];
-    if (UserDetailAdd) {
-      this.setState({ UserPaticularData: UserDetailAdd })
-    }
+
     let GetClickPaticularUser = localStorage.getItem("ClickPaticularUser") ? (localStorage.getItem("ClickPaticularUser")) : [];
     if (GetClickPaticularUser) {
       this.setState({ PaticulatUserName: GetClickPaticularUser })
     }
+    let UserDetailAdd=  localStorage.getItem(`${GetClickPaticularUser}`) ? JSON.parse(localStorage.getItem(`${GetClickPaticularUser}`)) :[];
+    if (UserDetailAdd) {
+      this.setState({ UserPaticularData: UserDetailAdd })
+    }
+    
   }
-
-  // componentDidUpdate = () => {
-
-  // }
+ 
   render() {
     return (
       <>
         <div className="UserDetailContainer">
           <div className="UserDetailSection">
-            <UserDetailNavbar Profile={"S"} UserName={this.state.PaticulatUserName} />
+            <UserDetailNavbar  UserName={this.state.PaticulatUserName} />
+            {/* delted Profile={"S"} */}
             <div className="DisplaySection">
               {
                 this.state.UserPaticularData.map((value, index) => {

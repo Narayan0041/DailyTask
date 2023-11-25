@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
 export default class AddTextSection extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       "Text": "",
     }
@@ -13,34 +13,25 @@ export default class AddTextSection extends Component {
   Submit = (e) => {
     e.preventDefault();
     let { Text } = this.state;
+    // let { TextValue } = this.props.textUpdate;
     let UserDetailAdd = localStorage.getItem("UserDetailAdd") ? JSON.parse(localStorage.getItem("UserDetailAdd")) : [];
     let GetClickPaticularUser = localStorage.getItem("ClickPaticularUser") ? (localStorage.getItem("ClickPaticularUser")) : [];
-    // console.log(GetClickPaticularUser)
-    if(Text !==""){
-      if(GetClickPaticularUser){
-        UserDetailAdd.push(Text);
-        localStorage.setItem("UserDetailAdd", JSON.stringify(UserDetailAdd))
-        this.setState({"Text":""});
+    if (Text !== "") {
+      if (GetClickPaticularUser) {
+        let GetData = localStorage.getItem(`${GetClickPaticularUser}`) ? JSON.parse(localStorage.getItem(`${GetClickPaticularUser}`)) : [];
+        GetData.push(Text);
+        localStorage.setItem(`${GetClickPaticularUser}`, JSON.stringify(GetData));
+        window.location.reload();
       }
     }
-
-     // let UserDetailAdd = localStorage.getItem(`${GetClickPaticularUser}`) ? JSON.parse(localStorage.getItem(`${GetClickPaticularUser}`)) : [];
-    // let GetClickPaticularUser = localStorage.getItem("ClickPaticularUser") ? (localStorage.getItem("ClickPaticularUser")) : [];
-    // // console.log(GetClickPaticularUser)
-    // if(Text !==""){
-    //   if(GetClickPaticularUser){
-    //     UserDetailAdd.push(Text);
-    //     localStorage.setItem(`${GetClickPaticularUser}`, JSON.stringify(UserDetailAdd))
-    //     this.setState({"Text":""});
-    //   }
-    // }
+    this.setState({ Text: "" });
+    //  TextValue =true
   }
-  componentDidMount=()=>{
+  componentDidMount = () => {
     let UserDetailAdd = localStorage.getItem("UserDetailAdd") ? JSON.parse(localStorage.getItem("UserDetailAdd")) : [];
-    if(UserDetailAdd.length===0){
-      alert("No data")
+    if (UserDetailAdd.length === 0) {
+      // alert("No data")
     }
-    console.log(UserDetailAdd)
   }
   render() {
     return (
@@ -49,12 +40,10 @@ export default class AddTextSection extends Component {
           <div className="AddTextContainer">
             <div className='Text'>
               <img src='./image/add-task.png' width={30} alt='add-text' />
-              <input type='text' placeholder='Enter Your Text' autoFocus onChange={(event) => { this.HandleChange(event, "Text") }} />
+              <input type='text' value={this.state.Text} placeholder='Enter Your Text' autoFocus onChange={(event) => { this.HandleChange(event, "Text") }} />
             </div>
-            <div>
-              <button className='Submit' onClick={this.Submit}>Submit</button>
-            </div>
-            <div>
+            <div className='image'>
+              <img src='./image/send.png' alt='send' width={25} onClick={this.Submit} ></img>
             </div>
           </div>
         </div>

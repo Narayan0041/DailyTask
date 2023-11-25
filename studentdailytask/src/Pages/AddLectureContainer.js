@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import AddLectureNavbar from '../component/AddLectureNavbar'
 export default class AddLectureContainer extends Component {
   constructor(props) {
     super(props)
@@ -23,16 +23,26 @@ export default class AddLectureContainer extends Component {
   }
   Submit = () => {
     let { Date, Day, TextArea } = this.state
+    // Generate id based on the current length of AddLectureData
     let AddLectureData = localStorage.getItem("AddLectureData") ? JSON.parse(localStorage.getItem("AddLectureData")) : [];
-    AddLectureData.push({ "Date": Date, "Day": Day, "TextArea": TextArea })
+    let id = AddLectureData.length + 1;
+    AddLectureData.push({ id, "Date": Date, "Day": Day, "TextArea": TextArea })
     localStorage.setItem("AddLectureData", JSON.stringify(AddLectureData))
-
     alert("Add Lecture SuccessFully!!")
+
+    let AddNotification = localStorage.getItem("AddNotification") ? JSON.parse(localStorage.getItem("AddNotification")) : []; // Parse if it exists in localStorage 
+    AddNotification.push(Date);
+    localStorage.setItem("AddNotification", JSON.stringify(AddNotification));
+
   }
+
   render() {
     return (
       <>
         <div className="AddLectureSection">
+          <div>
+            <AddLectureNavbar  Title={"Add Lecture"} />
+          </div>
           <div className="AddLectureContainer">
             <h1>Add Your Lecture</h1>
             <img src='./image/notepad.png' alt='AddLectureImage' width={60} />
@@ -43,7 +53,7 @@ export default class AddLectureContainer extends Component {
               </div>
               <div className="WeakDays">
                 <label htmlFor='WeakDays'>Select Day:</label>
-                <select name="Todays_Day" onChange={(event) => { this.ChangeDay(event, "Day") }}>
+                <select name="Todays_Day" value={this.state.Day} onChange={(event) => { this.ChangeDay(event, "Day") }}>
                   <option value="" selected>Select Day</option>
                   <option value="Monday">Monday</option>
                   <option value="Tuesday">Tuesday</option>

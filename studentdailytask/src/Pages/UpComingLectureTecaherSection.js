@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import UpComingLecture from '../component/UpComingLecture'
+import UpcomigLectureNavbar from '../component/UpcomigLectureNavbar';
+import AddLectureContainer from './AddLectureContainer';
+import { Link } from 'react-router-dom';
 
 export default class UpComingLectureTecaherSection extends Component {
   constructor(props) {
@@ -23,7 +26,9 @@ export default class UpComingLectureTecaherSection extends Component {
       <>
         <div className="UpComingLectureTeacherSection">
           <div className="UpComingLectureTeacherContainer">
-            <h1>UpComing Lecture</h1>
+            <div>
+              <UpcomigLectureNavbar NavbarValue={"UpComing Lecture"}/>
+            </div>
             <div className="UpComingLectureTeacherBox">
               {
                 this.state.UpComingLectureDatas.map((data, index) => {
@@ -35,7 +40,9 @@ export default class UpComingLectureTecaherSection extends Component {
 
             </div>
             <div className="AddLecture">
+              <Link to="/AddLectureContainer" element={<AddLectureContainer/>}>
               <p><span className="fa-solid fa-address-book"></span>  Add Lecture</p>
+              </Link>
             </div>
           </div>
         </div>

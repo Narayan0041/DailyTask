@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import NavBar from '../component/NavBar'
 import BottomNavbar from '../component/BottomNavbar'
+import RoadMapNavbar from '../component/RoadMapNavbar'
+import CourseDropdown from '../component/RoadMapData'
 
 export default class RoadMap extends Component {
     constructor(props) {
@@ -12,10 +13,10 @@ export default class RoadMap extends Component {
                 <div className="RoadMapConatiner">
                     <div className="RoadMapSection">
                         <div>
-                            <NavBar />
+                           <RoadMapNavbar NavbarValue={"Road Map"}/>
                         </div>
                         <div className='RoadMapContainer'>
-                            <h1>ROad Map</h1>
+                       <CourseDropdown/>
                         </div>
                         <div>
                             <BottomNavbar />

@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import NotificationNavbar from '../component/NotificationNavbar';
+import UpcomigLectureNavbar from '../component/UpcomigLectureNavbar';
+import SelectModeNavbar from '../component/SelectModeNavbar';
 
 export default class SelectMode extends Component {
     constructor() {
@@ -14,7 +17,7 @@ export default class SelectMode extends Component {
                 <div className="SelectModeContainer">
                     <div className="MainContainer">
                         <div className="SelectModeHeader">
-                            <h2>Select Mode</h2>
+                           <SelectModeNavbar NavbarValue={"SELECT MODE"}/>
                         </div>
                         <div className='ModeSection'>
                             <div className='TeacherSection RoleBox' onClick={()=>{ this.SelectModeClick("Teacher")}}>
@@ -33,13 +36,17 @@ export default class SelectMode extends Component {
                                     <img src='./image/read.png' width={60} alt='Student'></img>
                                 </span>
                             </div>
-                            <div className='OtherSection RoleBox' onClick={()=>{ this.SelectModeClick("Other")}}> 
+                            {/* <div className='OtherSection RoleBox' onClick={()=>{ this.SelectModeClick("Other")}}> 
                                 <h1>Other</h1>
                                 <p className='UnderLine'></p>
                                 <p>For Teacher  Role here , Click to do Your Work </p>
                                 <span className='RoleIcon'>
                                     <img src='./image/man.png' width={60} alt='OtherImage'></img>
                                 </span>
+                            </div> */}
+                            <div className='sepration sepSelectMode'></div>
+                            <div className='SelectModeFooter'>
+                                <p>In Select Mode, choose your role: Teacher - guiding processes, or Student - learning the art of task management, both shaping efficiency and productivity.</p>
                             </div>
                         </div>
                     </div>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
 export default class UserMessageContainer extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props);
     }
   render() {
     return (
