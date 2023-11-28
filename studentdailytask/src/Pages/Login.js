@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import ForgetPassword from './ForgetPassword';
 export default class LoginPage extends Component {
     constructor(props) {
         super(props)
@@ -42,11 +43,9 @@ export default class LoginPage extends Component {
                 <div className="Container">
                     <div className="PageContainer">
                         <div className='TopSection'>
-                            <div className='BackSection'><i className="fa-solid fa-arrow-left"></i></div>
-                            {/* <div className="SignUp"><a href='Register'>Sign up</a></div> */}
-                            <div><Link to="/Register">Sign up</Link></div>
+                            <div className='LoginUrl'><Link to="/Register">Sign up</Link></div>
                         </div>
-                        <div className='HeaderContainer'>
+                        <div className='LoginHeaderContainer'>
                             <div className='HeaderSection'>
                                 <h2>Login in</h2>
                             </div>
@@ -60,8 +59,8 @@ export default class LoginPage extends Component {
                                 <div>
                                     <input type='password' placeholder='Password' value={this.state.Password} onChange={(event) => { this.HandleChange(event, "Password") }}></input>
                                 </div>
-                                <div className='forgetPassword'>
-                                    <p>Forget Password?<Link to='/ForgotPassword'>  Click here</Link></p>
+                                <div className='ForgetPasswordUrlLink'>
+                                    <span>Forget Password?</span> <Link to="/ForgotPassword" className='LinkForget'>Click here</Link>
                                 </div>
                                 <div className='Button'>
                                     <button onClick={this.Submit}>Login In</button>

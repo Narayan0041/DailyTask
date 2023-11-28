@@ -60,18 +60,33 @@
    flex-direction: column;
    padding-bottom: 2rem;
  }
-
+ .LoginHeaderContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+ }
  .UserProfileSection {
    margin-top: 1rem;
  }
 
  .TopSection {
    display: flex;
-   justify-content: space-between;
+   justify-content: flex-end;
    padding: 1rem 1rem;
    align-items: center;
  }
 
+.LoginUrl a{
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+.LoginUrl Link{
+  color: var(--text-color);
+}
  .BackSection i {
    font-size: 1.2rem;
    color: var(--text-color);
@@ -85,7 +100,7 @@
 
  .InputSection {
    width: 100%;
-   margin-left: 2rem;
+   /* margin-left: 2rem; */
  }
 
  .InputSection input {
@@ -99,14 +114,14 @@
    background-color: white
  }
 
- .forgetPassword p {
+ .ForgetPasswordUrlLink  {
    font-weight: 500;
-   margin-left: .5rem;
-   margin-top: .5rem;
+  margin-right: 8rem;
+   margin-top: .8rem;
    font-size: .9rem;
  }
 
- .forgetPassword a {
+ .ForgetPasswordUrlLink a {
    text-decoration: underline;
    color: var(--text-color);
  }
@@ -128,10 +143,19 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
    width: 100%;
-   margin-top: 10rem;
+   margin-top: 2rem;
  }
-
+ .LoginUrl p{
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-left: 20rem;
+ }
+.ForgetPasswordContainer{
+  margin-top: 7rem;
+}
  .ForgetPasswordContainer img {
    margin-left: 8rem;
    margin-top: 1rem;
@@ -1074,6 +1098,7 @@
    display: flex;
    justify-content: flex-start;
    align-items: center;
+   margin-left: .5rem;
  }
 
  .Profile span {
@@ -1090,6 +1115,11 @@
 
  .Profile div {
    margin-left: .5rem;
+ }
+ .Button .Logout{
+  margin-top: 3rem;
+    height: 3.2rem;
+    margin-left: 6rem;
  }
 
  .EditSection {
@@ -1115,7 +1145,7 @@
  }
 
  .Button {
-   margin-left: 20%;
+  margin-right: 2.7rem;
    margin-top: -2rem;
    width: 40%;
  }
@@ -1430,10 +1460,14 @@
    width: 100;
 
  }
-
- .sepp {
-   margin-right: 3rem;
- }
+.SeprateFooter{
+  margin-top: 3rem;
+    margin-bottom: 2rem;
+    height: 0.01rem;
+    width: 70%;
+    margin-right: 1rem;
+    background-color: gray;
+}
 
  .footerTextCircularSection p {
    color: var(--text-color);
@@ -1516,8 +1550,14 @@
 .spp{
   margin-top: 2rem;
 }
-
-
+.BottomNavbarBox a{
+  color: var(--text-color);
+}
+.BottomNavbarElement{
+  display: flex;
+   align-items: center;
+   flex-direction: column;
+}
 
 
 
@@ -1553,7 +1593,7 @@
 
    .HeaderContainer {
      width: 100%;
-     margin-top: 3rem;
+     margin-top: 4rem;
    }
 
    .UserProfileSection img {
@@ -1561,37 +1601,44 @@
    }
 
    .InputSection {
-     margin-top: 1rem;
+    display: flex;
+    margin-top: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
    }
 
    .InputSection input {
      /* margin-left: 1rem; */
      width: 22rem;
      font-size: 1rem;
-     height: 3.5rem;
+     height: 3.2rem;
      margin-top: 1rem;
+     background-color: transparent;
    }
 
    .InputSection input:focus {
      border: 2px solid var(--text-color);
    }
 
-   .forgetPassword p {
-     margin-left: 1rem;
+   /* .forgetPassword span {
+     margin-right: 9rem;
      margin-top: 1rem;
    }
+    */
 
    .Button button {
-     height: 3.5rem;
+    margin-top: 5rem;
+     height: 3.2rem;
    }
 
    /* ---------------------register part---------------------- */
    .sepration {
-     margin-top: 2rem;
+     margin-top: 8rem;
      margin-bottom: 2rem;
      height: .01rem;
      width: 70%;
-     margin-left: 3rem;
+     margin-right: 1rem;
      background-color: gray;
    }
 

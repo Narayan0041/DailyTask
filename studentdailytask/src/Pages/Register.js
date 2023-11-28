@@ -36,19 +36,14 @@ export default class Register extends Component {
             <>
                 <div className="Container">
                     <div className="PageContainer">
-                        <div className='TopSection'>
-                            <div className='BackSection'><i className="fa-solid fa-arrow-left"></i></div>
-                            {/* <div className="SignUp"><a href='/'>Log in</a></div> */}
-                            <div><Link to="/Login">Login</Link></div>
+                        <div className='TopSection LoginTopSection'>
+                            <div className='LoginUrl'><Link to="/Login">Login</Link></div>
                         </div>
                         <div className='HeaderContainer'>
                             <div className='HeaderSection'>
                                 <h2>Create your account</h2>
                             </div>
-                            {/* <div className='UserProfileSection'>
-                            <img src={this.props.UserImage} width={80} alt='UserImage' />
-                         </div> */}
-                            <div className='InputSection' style={{ marginLeft: "1rem" }}>
+                            <div className='InputSection' style={{ marginLeft: "0rem" }}>
                                 <div>
                                     <input type='text' id='Name' placeholder='Enter Your Name' autoFocus value={this.state.Name} onChange={(event) => { this.HandleChange(event, "Name") }}></input>
                                     <div className='ErrorDisplay'></div>

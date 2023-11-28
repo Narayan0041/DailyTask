@@ -128,22 +128,22 @@ function App() {
 {/* <Layout2>
   </Layout2> */}
 
- {/* <Router>
+  <Router>
  <Routes>
   <Route path='/Register' element={<Register />}/>
   <Route path='/Login' element={<LoginPage />}/>
   <Route path='/ForgotPassword' element={<ForgetPassword/>}/>
   <Route path='/' element={<MainPage />}/>
   <Route path='/AddUser' element={<StudentAdd/>} />
-  <Route path='/TeacherSection' element={< UpComingLectureTecaherSection/>}/>
+  <Route path='/TeacherLectureSection' element={< UpComingLectureTecaherSection/>}/>
   <Route path='/AddLectureContainer' element={<AddLectureContainer/>}/>
   <Route path='/RoadMap' element={<RoadMap/>}/>
-  <Route path='/Attendance' element={<TeacherPresentSection/>}/>
+  <Route path='/TeacherAttendance' element={<TeacherPresentSection/>}/>
   <Route path='/Notification' element={<NotificationPage/>}/>
 
 
  </Routes>
- </Router> */}
+ </Router> 
     </>
   );
 }

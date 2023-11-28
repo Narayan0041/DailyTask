@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import LoginPage from './Login'
 
 export default class ForgetPassword extends Component {
   constructor() {
@@ -29,6 +31,9 @@ export default class ForgetPassword extends Component {
     return (
       <>
         <div className="ForgetPasswordSection">
+          <div className='LoginUrl'>
+            <Link to="/Login" element={<LoginPage/>}><p>Login</p></Link>
+          </div>
           <div className="ForgetPasswordContainer">
             <h1>Password Reset</h1>
             <img src='./image/forgot-password.png' alt='forget-passwordImage' width={60} />

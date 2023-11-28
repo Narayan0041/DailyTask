@@ -43,8 +43,8 @@ export default class ProfileSection extends Component {
                         <span className="fa-solid fa-pencil"></span><span className='Edit'>Edit Profile</span>
                     </div>
                     <div className='seprationTwoDiv'></div>
-                    <div className='Button'>
-                        <button className='Button' onClick={this.Logout}>LogOut</button>
+                    <div className='Button '>
+                        <button className='Logout' onClick={this.Logout}>LogOut</button>
                     </div>
                 </div>
             </>

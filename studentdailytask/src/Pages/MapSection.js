@@ -57,7 +57,7 @@ export default class MapSection extends Component {
                             </div>
                             </div>
                         </div>
-                        <div className='sepration sepp'></div>
+                        <div className='SeprateFooter'></div>
                         <div className='footerTextCircularSection'>
                             <p>Every peak on the graph echoes success, while every dip whispers opportunity for growth.</p>
                         
