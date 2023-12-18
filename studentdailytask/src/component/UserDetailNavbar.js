@@ -8,7 +8,8 @@ export default class UserDetailNavbar extends Component {
     }
   }
   componentDidMount = () => {
-    let user = localStorage.getItem("ClickPaticularUser") ? (localStorage.getItem("ClickPaticularUser")):[];
+    // let user = localStorage.getItem("ClickPaticularUser") ? (localStorage.getItem("ClickPaticularUser")):[];
+    let user =this.props.UserName
     this.setState({UserFirstChar:user.charAt(0)})
     }
   render() {

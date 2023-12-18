@@ -20,6 +20,7 @@ export default class AddLectureContainer extends Component {
   }
   ChangeText = (event, key) => {
     this.setState({ [key]: event.target.value })
+  
   }
   Submit = () => {
     let { Date, Day, TextArea } = this.state
@@ -33,6 +34,9 @@ export default class AddLectureContainer extends Component {
     let AddNotification = localStorage.getItem("AddNotification") ? JSON.parse(localStorage.getItem("AddNotification")) : []; // Parse if it exists in localStorage 
     AddNotification.push(Date);
     localStorage.setItem("AddNotification", JSON.stringify(AddNotification));
+    this.setState({Date:"",
+                  Date:"",
+                TextArea:""})
 
   }
 

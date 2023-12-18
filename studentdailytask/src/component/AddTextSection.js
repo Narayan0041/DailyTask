@@ -18,10 +18,10 @@ export default class AddTextSection extends Component {
     let GetClickPaticularUser = localStorage.getItem("ClickPaticularUser") ? (localStorage.getItem("ClickPaticularUser")) : [];
     if (Text !== "") {
       if (GetClickPaticularUser) {
-        let GetData = localStorage.getItem(`${GetClickPaticularUser}`) ? JSON.parse(localStorage.getItem(`${GetClickPaticularUser}`)) : [];
+        let GetData = localStorage.getItem(`${this.props.UserName}`) ? JSON.parse(localStorage.getItem(`${this.props.UserName}`)) : [];
         GetData.push(Text);
-        localStorage.setItem(`${GetClickPaticularUser}`, JSON.stringify(GetData));
-        window.location.reload();
+        localStorage.setItem(`${this.props.UserName}`, JSON.stringify(GetData));
+        // window.location.reload();
       }
     }
     this.setState({ Text: "" });

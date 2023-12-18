@@ -9,11 +9,11 @@ export default class Notification extends Component {
         let RemoveNotificationId =event;
          let NewDataNotification = GetData.filter(item => item.id !== RemoveNotificationId); // Filtering based on the correct 'id'
         localStorage.setItem("AddLectureData", JSON.stringify(NewDataNotification));
-        console.log("Removed the item");
-        alert("Item removed");
+        alert("you want to delete all the message")
         window.location.reload()
     }
     render() {
+        console.log(this.props.date)
         return (
             <>
                 <div className="NotificationContainer">
@@ -35,7 +35,7 @@ export default class Notification extends Component {
                                     <p>New Tasks:</p>
                                 </div>
                                 <div className='date'>
-                                    <p>{this.props.Date}</p>
+                                    <p>{this.props.date}</p>
                                 </div>
                             </div>
                             <div className="thirdContainer">

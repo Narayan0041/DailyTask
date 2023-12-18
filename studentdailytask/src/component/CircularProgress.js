@@ -10,13 +10,13 @@ class CircularProgress extends Component {
   }
 
   componentDidMount() {
-    // const storageKey = `${this.props.StudentName}-Present`;
-    let ShowPaticularData = localStorage.getItem("GetResultInMapPresent") ? JSON.parse(localStorage.getItem("GetResultInMapPresent")) : [];
-    let GetCount = localStorage.getItem(ShowPaticularData) ? JSON.parse(localStorage.getItem(ShowPaticularData)) : [];
+    // let ShowPaticularData = localStorage.getItem("GetResultInMapPresent") ? JSON.parse(localStorage.getItem("GetResultInMapPresent")) : [];
+    // let GetCount = localStorage.getItem(ShowPaticularData) ? JSON.parse(localStorage.getItem(ShowPaticularData)) : [];
+    let GetCount = localStorage.getItem(`${this.props.name}-Present`) ?JSON.parse (localStorage.getItem(`${this.props.name }-Present`)) :[];
     let NoOfPresent = GetCount.length;
-    let StudentAttendancePresent = localStorage.getItem("GetResultInMapAbsent");
-    let PaticularAbsent = StudentAttendancePresent ? JSON.parse(StudentAttendancePresent) : []; 
-    let GetCountAbsent = localStorage.getItem(PaticularAbsent) ? JSON.parse(localStorage.getItem(PaticularAbsent)) : [];
+    // let StudentAttendancePresent = localStorage.getItem("GetResultInMapAbsent");
+    // let PaticularAbsent = StudentAttendancePresent ? JSON.parse(StudentAttendancePresent) : []; 
+    let GetCountAbsent = localStorage.getItem(`${this.props.name}-Absent`) ? JSON.parse(localStorage.getItem(`${this.props.name}-Absent`)) : [];
     let NoOfAbsent = GetCountAbsent.length
     let NoOFBoth = NoOfPresent + NoOfAbsent
     // Calculate percentage based on the length of StudentAttendancePresent array

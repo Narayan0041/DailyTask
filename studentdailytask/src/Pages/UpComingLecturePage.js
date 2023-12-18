@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import UpComingLecture from '../component/UpComingLecture'
 import UpcomigLectureNavbar from '../component/UpcomigLectureNavbar';
+import BottomNavbar from '../component/BottomNavbar';
 
 export default class UpComingLecturePage extends Component {
     constructor(props) {
@@ -31,6 +32,9 @@ export default class UpComingLecturePage extends Component {
                                     )
                                 })
                             }
+                        </div>
+                        <div>
+                            <BottomNavbar Alert={this.state.NoOfAlert}/>
                         </div>
                     </div>
                 </div>

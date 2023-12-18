@@ -42,7 +42,7 @@ export default class StudentAdd extends Component {
               <div className="StudentAddInputSection">
                 <div>
                   <label htmlFor='StudentName'>Student Name</label>
-                  <input type='text' id='StudentName' placeholder='Enter Student Name' value={this.state.StudentName} autoFocus onChange={(event) => { this.ChangeInput(event, "StudentName") }} />
+                  <input type='text' id='StudentName' placeholder='Enter Student Name' value={this.state.StudentName.trim()} autoFocus onChange={(event) => { this.ChangeInput(event, "StudentName") }} />
                 </div>
                 <div className='course'>
                   <label htmlFor="course">Choose a Course:</label>

@@ -44,7 +44,7 @@ export default class MainPage extends Component {
           {
             this.state.StudentDataLists.map((value, item) => {
               return (
-                <StudentsList ProfileName={this.state.UserList[item]} key={item} StudentName={value.StudentName} />
+                <StudentsList ProfileName={this.state.UserList[item]} key={item} index={item} StudentName={value.StudentName} />
               )
             })
           }

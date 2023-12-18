@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
 export default class RoadMapNavbar extends Component {
   constructor(props) {
@@ -20,9 +21,9 @@ export default class RoadMapNavbar extends Component {
     this.setState({ activeButton: event });
     alert(event)
   }
-  ClickMenuButton =()=>{
-    let MenuButton =document.querySelector(".MenuNavbar")
-    if(MenuButton){
+  ClickMenuButton = () => {
+    let MenuButton = document.querySelector(".MenuNavbar")
+    if (MenuButton) {
       MenuButton.classList.toggle("active")
     }
   }
@@ -33,7 +34,8 @@ export default class RoadMapNavbar extends Component {
         <div className="NotificationNavbarContainer">
           <div className="NotificationNavbarSection">
             <div className="NotificationNavbar RoadMapNavbar">
-              <div className='LogoSection'><img src='./image/report-analysis.png' alt='NavbBarLogo' width={40} /></div>
+              <div className='LogoSection'>
+                <Link to="/"><img src='./image/report-analysis.png' alt='NavbBarLogo' width={40} /></Link></div>
               <div className='NotificationTextSection RoadMapTextSection'><h2>{this.props.NavbarValue}</h2></div>
             </div>
             {/* <div className="NavbarMenuSection">

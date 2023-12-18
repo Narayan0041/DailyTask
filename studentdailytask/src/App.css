@@ -906,6 +906,7 @@
    align-items: baseline;
    width: 100%;
    flex-direction: column;
+   margin-top: 7rem;
  }
 
  .NotificationContainer .UpperContainer {
@@ -958,6 +959,7 @@
 
 
 
+
  /* ------------------------------------------------NotificationContainer--------------------------------------- */
  .NotificationPageSection {
    width: 100%;
@@ -1003,6 +1005,18 @@
  .NotificationBox::after {
    color: white;
    background-color: var(--text-color);
+ }
+ .LectureMessage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 85vh;
+  width: 100%;
+  color: var(--text-color);
+ }
+ .LectureMessage img{
+  padding-bottom: 1rem;
  }
 
  /* ----------------------------------------RoadMapConatiner------------------------------------------- */
@@ -1252,7 +1266,7 @@
 
  .DifferentButtonSection {
    width: 100%;
-   height: 4rem;
+   /* height: 4rem; */
    background-color: var(--text-color);
    display: flex;
    justify-content: flex-start;
@@ -1416,6 +1430,7 @@
    align-items: center;
    flex-direction: column;
    width: 100%;
+   padding-bottom: 5rem;
  }
 
  .MapBox {
@@ -1558,7 +1573,12 @@
    align-items: center;
    flex-direction: column;
 }
-
+.MapSection h3{
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+  word-spacing: .1rem;
+  color: var(--text-color);
+}
 
 
 
